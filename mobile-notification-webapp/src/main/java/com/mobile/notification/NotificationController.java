@@ -1,5 +1,6 @@
 package com.mobile.notification;
 
+import com.mobile.notification.dto.NotifyRequest;
 import com.mobile.notification.dto.NotifyResponse;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class NotificationController {
 
+    @RequestMapping(value = "/test", produces = MediaType.APPLICATION_JSON_VALUE)
+    public NotifyResponse test() {
+        return new NotifyResponse("Hey GitHub! You're Good!");
+    }
+
     @RequestMapping(value = "/notify", produces = MediaType.APPLICATION_JSON_VALUE)
-    public NotifyResponse greeting() {
+    public NotifyResponse notify(NotifyRequest notifyRequest) {
+
         return new NotifyResponse("Hey GitHub!");
     }
 }

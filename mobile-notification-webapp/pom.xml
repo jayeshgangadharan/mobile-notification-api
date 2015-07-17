@@ -30,6 +30,11 @@
             <artifactId>rest-assured</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.mobile.notification</groupId>
+            <artifactId>mobile-notification-service</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

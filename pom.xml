@@ -20,6 +20,7 @@
 
     <modules>
         <module>mobile-notification-webapp</module>
+        <module>mobile-notification-service</module>
     </modules>
 
     <dependencyManagement>
@@ -30,6 +31,12 @@
                 <version>2.4.1</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>com.mobile.notification</groupId>
+                <artifactId>mobile-notification-service</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
