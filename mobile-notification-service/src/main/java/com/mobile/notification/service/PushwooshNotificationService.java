@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
+
 /**
  * Pushwoosh notification service
  * User: Jayesh
@@ -15,15 +17,16 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class PushwooshNotificationService implements NotificationService {
 
-    private RestTemplate restTemplate = new RestTemplate();
+    @Resource
+    private RestTemplate restTemplate;
 
     @Value("${pushwoosh.url:https://cp.pushwoosh.com/json/1.3/}")
     private String pushwooshUrl;
 
-    @Value("${pusswoosh.application.code}")
+    @Value("${pushwoosh.application.code:TestApp}")
     private String pushwooshApplicationCode;
 
-    @Value("${pusswoosh.api.access.token}")
+    @Value("${pushwoosh.api.access.token:Testtoken}")
     private String pushwooshAccessCode;
 
     @Override

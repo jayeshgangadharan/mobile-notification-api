@@ -19,8 +19,8 @@
     </properties>
 
     <modules>
-        <module>mobile-notification-webapp</module>
         <module>mobile-notification-service</module>
+        <module>mobile-notification-webapp</module>
     </modules>
 
     <dependencyManagement>
