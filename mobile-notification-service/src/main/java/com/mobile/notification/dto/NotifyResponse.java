@@ -7,20 +7,23 @@ package com.mobile.notification.dto;
  */
 public class NotifyResponse {
 
+    private String statusCode;
+    private String statusMessage;
+
+
     public NotifyResponse() {
     }
 
     public NotifyResponse(String message) {
-        this.message = message;
+        this.statusMessage = message;
     }
 
-    private String message;
 
-    public String getMessage() {
-        return message;
+    public String getStatusMessage() {
+        return statusMessage;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setStatusMessage(String statusMessage) {
+        this.statusMessage = statusMessage;
     }
 }
