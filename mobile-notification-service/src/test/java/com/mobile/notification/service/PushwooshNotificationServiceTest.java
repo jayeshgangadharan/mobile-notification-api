@@ -42,7 +42,7 @@ public class PushwooshNotificationServiceTest {
     @Before
     public void setUp() throws Exception {
         NotifyResponse notifyResponse = new NotifyResponse();
-        notifyResponse.setMessage("TEST");
+        notifyResponse.setStatusMessage("TEST");
         when(restTemplate.getForObject(anyString(), eq(NotifyResponse.class))).thenReturn(notifyResponse);
     }
 
@@ -50,7 +50,7 @@ public class PushwooshNotificationServiceTest {
     public void testSendNotification() throws Exception {
         Notification notification = new Notification();
         NotifyResponse notifyResponse = pushwooshNotificationService.sendNotification(notification);
-        assertEquals("TEST", notifyResponse.getMessage());
+        assertEquals("TEST", notifyResponse.getStatusMessage());
     }
 
     @Configuration
