@@ -33,6 +33,7 @@ public class PushwooshNotificationService implements NotificationService {
     public NotifyResponse sendNotification(Notification notification) {
         NotifyResponse response = new NotifyResponse();
         String url = getCreateMessageUrl();
+
         response = restTemplate.getForObject(url, NotifyResponse.class);
         return response;
     }
